@@ -1,25 +1,28 @@
 
-package homework1;
 
 import java.util.Stack;
 
 public class Homework1 {
 
     
-    public static String input; 
+    public static String input;
+    public static node tree = new node();
     public static void main(String[] args) {
         // TOD.O code application logic here
-        if (args.length > 0) {
-	String in = args[0];
-        //String in ="251-*32*+";
+        //if (args.length > 0) {
+	    //String in = args[0];
+        String in ="251-*32*+";
         input = in;
+
+
         //System.out.println(in.length());
-        node tree = new node();
+
         tree = infix(tree);
         inorder(tree);  
         int ans = calculate(tree);
-        System.out.print("=" + ans);    
-        }
+        System.out.print("=" + ans);
+        GUI.main(args);
+        //}
     }
     
     public static node infix(node tree) {
